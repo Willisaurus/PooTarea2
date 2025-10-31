@@ -35,10 +35,15 @@ public class PruebaAudioVisual {
         		.agregarInvestigador(new Investigador ("Carl Sagan",62,"Estadounidense"))
         		.agregarInvestigador(new Investigador ("Steven Soter",82,"Estadounidense"))
         		.agregarInvestigador(new Investigador ("Neil deGrasse Tyson",67,"Estadounidense"));
-        
+
         //nuevo contenido agregado a la clase main
-        contenidos[3] = new Publicidad("Juntos en todas", 1, "Comercial", "Coca-Cola", "Grey Argentina / Open X");
-        contenidos [4] = new Podcast("COMPUESTOS Podcast", 70, "Finanzas", "Andres Garza", 39);
+        contenidos[3] = new Publicidad("The One new spot", 2, "Comercial", "Dolce & Gabanna", "Martin Scorsese")
+                //reutiliazcion de metodos para anadir actores y relacionando neuvamente las clases
+                .agregarActor(new Actor("Scarlett Johansson", "Estadounidense"))
+                .agregarActor(new Actor("Matthew McConaughey", "Estadounidense"));
+        contenidos [4] = new Podcast("COMPUESTOS Podcast", 70, "Finanzas", "Andres Garza", 39)
+                    .agregaInvitado(new Invitados("Ari Borovoy", "Mexicano"))
+                    .agregaInvitado(new Invitados("Simon Cohen", "Mexicano"));
         // Mostrar los detalles de cada contenido audiovisual
         for (ContenidoAudiovisual contenido : contenidos) {
             contenido.mostrarDetalles();

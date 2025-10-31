@@ -1,9 +1,12 @@
 package uni1a;
 
+import java.util.ArrayList;
+
 public class Podcast extends ContenidoAudiovisual{
 	//nueva clase Podcast relacioanda con contenido audiovisual
     private int totalCapitulos;
     private String host;
+    private ArrayList<Invitados> invitados;
 
     //setters y getters de la clase
     public String getHost() {
@@ -26,7 +29,14 @@ public class Podcast extends ContenidoAudiovisual{
         super(titulo, duracionEnMinutos, genero);
         this.host = host;
         this.totalCapitulos = totalCapitulos;
+        this.invitados = new ArrayList<>();
     }
+    //metodo para agregar invitados a la lista de invitados
+    public Podcast agregaInvitado(Invitados invitado) {
+        this.invitados.add(invitado);
+        return this;
+    }
+
     //sobreescritura del metodo para añadir los atributos host y totalcapitulos
     @Override
     public void mostrarDetalles() {
@@ -37,6 +47,11 @@ public class Podcast extends ContenidoAudiovisual{
         System.out.println("Género: " + getGenero());
         System.out.println("Host: " + this.host);
         System.out.println("Total de Capítulos: " + this.totalCapitulos);
+        for (Invitados invitados : this.invitados) {
+            // Modificacion del metodo para concatenar al invitado y su nacionalidad
+            System.out.println("- " + invitados.getNombreInvitado() + " (" + invitados.getNacionalidadInvitado() + ")");
+        }
+        System.out.println();
         System.out.println();
     }
 
