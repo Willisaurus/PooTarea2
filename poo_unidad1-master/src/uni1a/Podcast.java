@@ -6,7 +6,7 @@ public class Podcast extends ContenidoAudiovisual{
 	//nueva clase Podcast relacioanda con contenido audiovisual
     private int totalCapitulos;
     private String host;
-    private ArrayList<Invitados> invitados;
+    private ArrayList<Invitado> invitados;
 
     //setters y getters de la clase
     public String getHost() {
@@ -32,7 +32,7 @@ public class Podcast extends ContenidoAudiovisual{
         this.invitados = new ArrayList<>();
     }
     //metodo para agregar invitados a la lista de invitados
-    public Podcast agregaInvitado(Invitados invitado) {
+    public Podcast agregarInvitado(Invitado invitado) {
         this.invitados.add(invitado);
         return this;
     }
@@ -47,7 +47,7 @@ public class Podcast extends ContenidoAudiovisual{
         System.out.println("Género: " + getGenero());
         System.out.println("Host: " + this.host);
         System.out.println("Total de Capítulos: " + this.totalCapitulos);
-        for (Invitados invitados : this.invitados) {
+        for (Invitado invitados : this.invitados) {
             // Modificacion del metodo para concatenar al invitado y su nacionalidad
             System.out.println("- " + invitados.getNombreInvitado() + " (" + invitados.getNacionalidadInvitado() + ")");
         }

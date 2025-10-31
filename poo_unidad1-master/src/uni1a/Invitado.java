@@ -1,8 +1,8 @@
 package uni1a;
 
-import java.util.ArrayList;
+// No se necesita "import java.util.ArrayList;"
 
-public class Invitados {
+public class Invitado {
     /*
     Al ser invitado un campo muy similar a actor se reutiliza el codigo de la clase Actor
     reemplazando simplemente las variables de actor a invitado, fomentando reutilizacion
@@ -10,7 +10,8 @@ public class Invitados {
      */
     private String nombreInvitado;
     private String nacionalidadInvitado;
-    private ArrayList<Invitados> invitados;
+    // (Se eliminó la lista de invitados que estaba aquí)
+
     //getter y setter para el campo nombreInvitado
     public String getNombreInvitado() {
         return nombreInvitado;
@@ -28,12 +29,11 @@ public class Invitados {
         this.nacionalidadInvitado = nacionalidadInvitado;
     }
     //constructor Invitadp
-    public Invitados(String nombreInvitado, String nacionalidadInvitado) {
+    public Invitado(String nombreInvitado, String nacionalidadInvitado) {
         super();
         this.nombreInvitado = nombreInvitado;
         this.nacionalidadInvitado = nacionalidadInvitado;
-        this.invitados = new ArrayList<>();
+        // (Se eliminó la inicialización de la lista de aquí)
     }
-
 
 }

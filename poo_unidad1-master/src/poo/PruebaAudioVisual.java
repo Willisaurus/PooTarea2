@@ -42,8 +42,8 @@ public class PruebaAudioVisual {
                 .agregarActor(new Actor("Scarlett Johansson", "Estadounidense"))
                 .agregarActor(new Actor("Matthew McConaughey", "Estadounidense"));
         contenidos [4] = new Podcast("COMPUESTOS Podcast", 70, "Finanzas", "Andres Garza", 39)
-                    .agregaInvitado(new Invitados("Ari Borovoy", "Mexicano"))
-                    .agregaInvitado(new Invitados("Simon Cohen", "Mexicano"));
+                    .agregarInvitado(new Invitado("Ari Borovoy", "Mexicano"))
+                    .agregarInvitado(new Invitado("Simon Cohen", "Mexicano"));
         // Mostrar los detalles de cada contenido audiovisual
         for (ContenidoAudiovisual contenido : contenidos) {
             contenido.mostrarDetalles();
