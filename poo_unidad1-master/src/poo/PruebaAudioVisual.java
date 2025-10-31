@@ -6,7 +6,7 @@ public class PruebaAudioVisual {
         System.out.println("Hello from Eclipse!");
 
         // Crear instancias de las subclases
-        ContenidoAudiovisual[] contenidos = new ContenidoAudiovisual[3];
+        ContenidoAudiovisual[] contenidos = new ContenidoAudiovisual[5];
         /*
          La pelicula es AGREGACIÓN, ya que una apelicula puede existir sin un actor, por ejemplo una animada
          o una pelicula mimica de stopmotion, de igual manera un actor puede existir sin una pelicula actuando
@@ -34,7 +34,8 @@ public class PruebaAudioVisual {
         		.agregarInvestigador(new Investigador ("Carl Sagan",62,"Estadounidense"))
         		.agregarInvestigador(new Investigador ("Steven Soter",82,"Estadounidense"))
         		.agregarInvestigador(new Investigador ("Neil deGrasse Tyson",67,"Estadounidense"));
-
+        contenidos[3] = new Publicidad("Juntos en todas", 1, "Comercial", "Coca-Cola", "Grey Argentina / Open X");
+        contenidos [4] = new Podcast("COMPUESTOS Podcast", 70, "Finanzas", "Andres Garza", 39);
         // Mostrar los detalles de cada contenido audiovisual
         for (ContenidoAudiovisual contenido : contenidos) {
             contenido.mostrarDetalles();
