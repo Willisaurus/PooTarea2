@@ -1,11 +1,11 @@
 package uni1a;
 
 public class Podcast extends ContenidoAudiovisual{
-
+	//nueva clase Podcast relacioanda con contenido audiovisual
     private int totalCapitulos;
     private String host;
 
-
+    //setters y getters de la clase
     public String getHost() {
         return host;
     }
@@ -21,13 +21,13 @@ public class Podcast extends ContenidoAudiovisual{
     public void setTotalCapitulos(int totalCapitulos) {
         this.totalCapitulos = totalCapitulos;
     }
-
+    //constructor de la nueva clase
     public Podcast(String titulo, int duracionEnMinutos, String genero, String host, int totalCapitulos ) {
         super(titulo, duracionEnMinutos, genero);
         this.host = host;
         this.totalCapitulos = totalCapitulos;
     }
-
+    //sobreescritura del metodo para añadir los atributos host y totalcapitulos
     @Override
     public void mostrarDetalles() {
         System.out.println("Detalles del Podcast:");
