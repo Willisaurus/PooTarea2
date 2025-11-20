@@ -1,19 +1,16 @@
-package pruebaAudioVisual.modelo;
+package pruebaAudioVisualModelo;
 
 public class Temporada {
 	
 	private int numeroTemporada;
 	private int cantidadCapitulos;
-	
-	//Se crea el constructor, los setter y getters
-	
+
 	public Temporada(int numeroTemporada, int cantidadCapitulos) {
 		super();
 		this.numeroTemporada = numeroTemporada;
 		this.cantidadCapitulos = cantidadCapitulos;
 	}
 
-	// Getters y Setters
 	public int getTemporadas() {
 		return numeroTemporada;
 	}

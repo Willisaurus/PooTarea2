@@ -1,4 +1,4 @@
-package pruebaAudioVisual.modelo;
+package pruebaAudioVisualModelo;
 
 public abstract class ContenidoAudiovisual {
     private static int contar = 0;
@@ -14,7 +14,6 @@ public abstract class ContenidoAudiovisual {
         this.genero = genero;
     }
 
-    // Getter y Setter para el campo 'titulo'
     public String getTitulo() {
         return titulo;
     }
@@ -23,7 +22,6 @@ public abstract class ContenidoAudiovisual {
         this.titulo = titulo;
     }
 
-    // Getter y Setter para el campo 'duracionEnMinutos'
     public int getDuracionEnMinutos() {
         return duracionEnMinutos;
     }
@@ -32,7 +30,6 @@ public abstract class ContenidoAudiovisual {
         this.duracionEnMinutos = duracionEnMinutos;
     }
 
-    // Getter y Setter para el campo 'genero'
     public String getGenero() {
         return genero;
     }
@@ -41,10 +38,8 @@ public abstract class ContenidoAudiovisual {
         this.genero = genero;
     }
 
-    // Getter para el campo 'id' (no se proporciona el Setter ya que 'id' se asigna en el constructor y parece ser inmutable)
-    public int getId() {
+    public  int getId() {
         return id;
     }
-    
-    public abstract void mostrarDetalles();
+
 }
