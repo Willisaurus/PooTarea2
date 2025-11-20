@@ -1,1 +1,10 @@
 /.metadata/
+
+.idea/
+
+
+*.iml
+
+bin/
+
+out/
