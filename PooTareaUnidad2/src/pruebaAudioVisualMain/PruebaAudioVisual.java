@@ -2,8 +2,10 @@ package pruebaAudioVisualMain;
 import pruebaAudioVisualControlador.ControladorProyecto;
 import pruebaAudioVisualModelo.*;
 
-public class PruebaAudioVisual {
-	public static void main(String[] args) {
+public class PruebaAudioVisual
+{
+	public static void main(String[] args)
+    {
 
         System.out.println("Hello from Eclipse!");
 
@@ -34,7 +36,7 @@ public class PruebaAudioVisual {
                     .agregarInvitado(new Invitado("Simon Cohen", "Mexicano"));
 
         ControladorProyecto InstanciacionControlador = new ControladorProyecto(contenidos);
-
         InstanciacionControlador.mostrarContenidos();
+        InstanciacionControlador.guardarDatosEnArchivo();
     }
 }
