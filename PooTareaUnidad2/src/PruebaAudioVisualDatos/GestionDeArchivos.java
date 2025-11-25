@@ -7,7 +7,12 @@ import java.util.ArrayList;
 public class GestionDeArchivos
 {
     private static final String RutaArchivos = "datos.csv";
-
+    /*
+    Se opto por un formato de escritura vertical, para guardar los datos de los contenidos audiovisuales
+    y sus componentes, esto para facilitar la lectura y escritura, ya que al usar otros formatos es mas
+    facil para el equipo usando mejor los recursos pero no para un usuario que desea editar los datos
+    del archivo para subirlos al programa.
+     */
     public void guardarDatos(ArrayList<ContenidoAudiovisual> listaDeContenidos)
     {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(RutaArchivos)))
@@ -85,7 +90,11 @@ public class GestionDeArchivos
             System.err.println("Error: " + e.getMessage());
         }
     }
-
+/*
+Tomando en cuenta que ela rchivo es vertical, su uso una vriable de estado para recordar
+el ultimo objeto padre leido. De esta manera, cuando leemos una linea hijo, sabemos a
+quien debemos pasar o asignar los valores del archivo csv.
+ */
     public ArrayList<ContenidoAudiovisual> cargarDatos()
     {
       ArrayList<ContenidoAudiovisual> listaLeida = new ArrayList<>();
@@ -104,6 +113,7 @@ public class GestionDeArchivos
                   continue;
               String[] partes = linea.split(";");
               String tipo = partes[0];
+              //Bloque para objetos principales
               if (tipo.equals("PELICULA")) {
                   String titulo = partes[1];
                   int duracion = Integer.parseInt(partes[2]);
@@ -118,6 +128,7 @@ public class GestionDeArchivos
                   contenidoActual = s;
                   listaLeida.add(s);
               } else if (tipo.equals("ACTOR")) {
+                  //Bloque para objetos hijos
                   if (contenidoActual instanceof Pelicula) {
                       Actor actor = new Actor(partes[1], partes[2]);
                       ((Pelicula) contenidoActual).agregarActor(actor);

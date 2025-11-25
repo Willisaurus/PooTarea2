@@ -15,8 +15,14 @@ public class ControladorProyecto {
         this.repositorio = new ArrayList<>();
         this.vista = new VistaProyecto();
         this.gestorDeArchivos = new GestionDeArchivos();
+        //Intentamos cargar los datos desde el archivo CSV
         this.repositorio = gestorDeArchivos.cargarDatos();
-
+        /*
+        Si el archivo anterior no cuenta con los datos necesarios, se va a proceder
+        a cargar los datos que se encuentran dentro del main. Este actuaria como
+        una especie de pequena base de datos que mantiene nuestros valores default
+        para inicializar.
+         */
         if (this.repositorio.isEmpty() && entradaInicial != null)
         {
             System.out.println("Cargando datos iniciales por defecto...");

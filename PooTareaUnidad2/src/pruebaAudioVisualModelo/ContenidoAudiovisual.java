@@ -1,5 +1,10 @@
 package pruebaAudioVisualModelo;
-
+/*
+No se agrego nada nuevo pero el importante enfatizar en que se cumple
+el apartado OCP de los principios SOLID. Debido a que es una clase
+abstracta que permite la extensión mediante la herencia sin necesidad
+de modificar el código existente.
+ */
 public abstract class ContenidoAudiovisual {
     private static int contar = 0;
     private String titulo;

@@ -2,7 +2,11 @@ package pruebaAudiovisualVista;
 import pruebaAudioVisualModelo.*;
 
 public class VistaProyecto {
-
+    /*
+    Se uso un patron de despachador, este recibe un objeto generico verifica
+    de que tipo es y delega la renderizacion de forma especifica, permitiendo
+    mantener el metodo limpio de logica de impresion.
+     */
     public void mostrarDetalles(ContenidoAudiovisual contenido) {
 
         if (contenido instanceof Pelicula) {
