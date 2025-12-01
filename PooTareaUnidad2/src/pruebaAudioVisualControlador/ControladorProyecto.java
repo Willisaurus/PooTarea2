@@ -37,6 +37,7 @@ public class ControladorProyecto {
         else
         {
             System.out.println("Datos cargados desde el archivo CSV exitosamente.");
+            System.out.println("Print de prueba");
         }
     }
 
